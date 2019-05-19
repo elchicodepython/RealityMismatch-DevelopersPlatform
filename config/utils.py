@@ -1,4 +1,5 @@
 from django.core.exceptions import ImproperlyConfigured
+import os
 
 
 def get_env_variable(var_name):
