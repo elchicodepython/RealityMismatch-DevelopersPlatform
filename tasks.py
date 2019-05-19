@@ -29,7 +29,10 @@ def startdevelopment(c):
         print('\033[1;31mContainer did\'nt exist before.\033[0m\n\
 Creating database container.')
         c.run(
-            f'sudo docker run -d --name {db_container_name} -e POSTGRES_DB={db_name} -e POSTGRES_USER={db_user} -e POSTGRES_PASSWORD={db_pw} -p 127.0.0.1:{exposed_port}:5432 postgres:{container_tag}')
+            f'sudo docker run -d --name {db_container_name} \
+            -e POSTGRES_DB={db_name} -e POSTGRES_USER={db_user}\
+            -e POSTGRES_PASSWORD={db_pw}\
+            -p 127.0.0.1:{exposed_port}:5432 postgres:{container_tag}')
 
 
 @task
