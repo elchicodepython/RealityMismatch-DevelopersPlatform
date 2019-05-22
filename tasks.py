@@ -9,7 +9,7 @@ node_version = '10'
 
 
 @task
-def installdocker(c):
+def install_docker(c):
     c.run('curl -fsSL https://get.docker.com -o /tmp/get-docker.sh')
     c.run('sudo sh /tmp/get-docker.sh')
 
@@ -29,7 +29,7 @@ def install_project_node(c):
 
 
 @task
-def startdevelopment(c):
+def start_development(c):
 
     db_name = DATABASES['default']['NAME']
     db_user = DATABASES['default']['USER']
@@ -51,7 +51,7 @@ Creating database container.')
 
 
 @task
-def finishdevelopment(c):
+def finish_development(c):
     print('Powering off database')
     c.run(
         f'sudo docker stop {db_container_name}'
