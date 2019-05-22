@@ -5,12 +5,26 @@ from config.settings.local import DATABASES
 
 
 db_container_name = 'dev_realitymismatch'
+node_version = '10'
 
 
 @task
 def installdocker(c):
     c.run('curl -fsSL https://get.docker.com -o /tmp/get-docker.sh')
     c.run('sudo sh /tmp/get-docker.sh')
+
+
+@task
+def install_nvm(c):
+    "Install Node Version Manager"
+    c.run('curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash')
+    c.run(". ~./bashrc")
+
+
+@task
+def install_project_node(c):
+    "Install Project Node Version (required NVM)"
+    c.run('nvm install ' + node_version)
 
 
 @task
