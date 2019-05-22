@@ -17,7 +17,8 @@ def installdocker(c):
 @task
 def install_nvm(c):
     "Install Node Version Manager"
-    c.run('curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash')
+    c.run('curl -o- \
+    https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash')
     c.run(". ~./bashrc")
 
 
