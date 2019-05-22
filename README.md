@@ -13,8 +13,8 @@ Tested in Debian 9.
 - Activate the virtual environment
 - Clone the repository
 - Install local requirements. `pip install -r requirements/local.txt`
-- If you dont have docker and you are in Debian/Ubuntu you can run inside de project root folder `invoke installdocker` and docker will be installed automatically in your system.
-- Every time you want to start developing the project or just running locally you should activate and configure first the database and other services involved with the project configuration. This can be easily done (and automatically) by running `invoke startdevelopment`.
-- Every time you finish running the platform, to save resources you can deactivate the database and other services involved by running `invoke finishdevelopment`.
+- If you dont have docker and you are in Debian/Ubuntu you can run inside de project root folder `invoke install-docker` and docker will be installed automatically in your system.
+- Every time you want to start developing the project or just running locally you should activate and configure first the database and other services involved with the project configuration. This can be easily done (and automatically) by running `invoke start-development`.
+- Every time you finish running the platform, to save resources you can deactivate the database and other services involved by running `invoke finish-development`.
 
 The invoke commands should be executed from the root folder of the repository.
