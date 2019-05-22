@@ -20,3 +20,24 @@ Tested in Debian 9.
 - Every time you finish running the platform, to save resources you can deactivate the database and other services involved by running `invoke finish-development`.
 
 The invoke commands should be executed from the root folder of the repository.
+
+## Run development environment
+
+Once you have all installed, the virtual environment activated and the database activated (`invoke start-development`), you can start making changes and
+checking the results.
+
+You should activate two development servers.
+
+- Webpack Server
+- Django Server
+
+### Webpack server
+
+- cd ui
+- npm run dev
+
+### Django server
+
+- ./manage.py runserver
+
+Done! Open a browser and go to localhost:8000
